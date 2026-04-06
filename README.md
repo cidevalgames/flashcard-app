@@ -1,50 +1,125 @@
-# Welcome to your Expo app 👋
+# 📚 Flashcard Quiz App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+> A simple mobile quiz app built with React Native & Expo — developed as a learning project.
+> 
+> Une application mobile de quiz par flashcards développée avec React Native & Expo — projet d'entraînement.
 
-## Get started
+---
 
-1. Install dependencies
+## 🇬🇧 English
 
-   ```bash
-   npm install
-   ```
+### Description
+A mobile quiz application where users answer multiple-choice questions, get instant visual feedback on their answers, and see their final score at the end. Built as a frontend-only training project to learn React Native fundamentals.
 
-2. Start the app
+### Stack
+- [React Native](https://reactnative.dev/)
+- [Expo](https://expo.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Expo Router](https://expo.github.io/router/)
 
-   ```bash
-   npx expo start
-   ```
+### Features
+- ✅ Multiple-choice questions with instant feedback
+- ✅ Green / red answer highlighting
+- ✅ Score tracking throughout the quiz
+- ✅ Final results screen with percentage
+- ✅ Restart the quiz at any time
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+### Project Structure
+```text
+flashcard-app/
+├── app/
+│   ├── (tabs)/
+│   │   └── index.tsx        # Main quiz screen
+│   └── _layout.tsx
+├── components/
+│   ├── FlashCard.tsx         # Question card with answer choices
+│   └── ResultsScreen.tsx     # Final score screen
+├── data/
+│   └── questions.ts          # Static quiz questions dataset
+├── hooks/
+│   └── useQuiz.ts            # Quiz logic (score, navigation, state)
+└── constants/
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Installation & Launch
+```bash
+# Clone the repository
+git clone https://github.com/cidevalgames/flashcard-app.git
+cd flashcard-app
 
-## Learn more
+# Install dependencies
+npm install
 
-To learn more about developing your project with Expo, look at the following resources:
+# Start the app
+npx expo start
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Then press `a` to open on Android emulator, or scan the QR code with **Expo Go** on your phone.
 
-## Join the community
+---
 
-Join our community of developers creating universal apps.
+## 🇫🇷 Français
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### Description
+Une application mobile de quiz où l'utilisateur répond à des questions à choix multiples, reçoit un retour visuel instantané sur ses réponses et consulte son score final. Projet frontend uniquement pour apprendre les bases de React Native.
+
+### Stack
+- [React Native](https://reactnative.dev/)
+- [Expo](https://expo.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Expo Router](https://expo.github.io/router/)
+
+### Fonctionnalités
+- ✅ Questions à choix multiples avec feedback instantané
+- ✅ Mise en évidence des réponses en vert / rouge
+- ✅ Suivi du score tout au long du quiz
+- ✅ Écran de résultats final avec pourcentage
+- ✅ Redémarrage du quiz à tout moment
+
+### Structure du projet
+```text
+flashcard-app/
+├── app/
+│   ├── (tabs)/
+│   │   └── index.tsx        # Écran principal du quiz
+│   └── _layout.tsx
+├── components/
+│   ├── FlashCard.tsx         # Carte de question avec choix de réponses
+│   └── ResultsScreen.tsx     # Écran du score final
+├── data/
+│   └── questions.ts          # Dataset statique des questions
+├── hooks/
+│   └── useQuiz.ts            # Logique du quiz (score, navigation, état)
+└── constants/
+```
+
+### Installation & Lancement
+```bash
+# Cloner le repository
+git clone https://github.com/cidevalgames/flashcard-app.git
+cd flashcard-app
+
+# Installer les dépendances
+npm install
+
+# Lancer l'application
+npx expo start
+```
+
+Appuie sur `a` pour ouvrir sur l'émulateur Android, ou scanne le QR code avec **Expo Go** sur ton téléphone.
+
+---
+
+## 📁 Git Flow
+
+This project follows the **git-flow** branching strategy:
+
+- `main` → stable production code
+- `develop` → integration branch
+- `feature/*` → one branch per feature
+- `release/*` → version preparation
+- `bugfix/*` → bug fixes on develop
+
+---
+
+*Built with ❤️ by [cidevalgames](https://github.com/cidevalgames)*
