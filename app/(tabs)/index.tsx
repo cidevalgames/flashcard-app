@@ -1,4 +1,5 @@
 import FlashCard from "@/components/FlashCard";
+import ResultsScreen from "@/components/ResultsScreen";
 import { useQuiz } from "@/hooks/useQuiz";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
@@ -8,10 +9,22 @@ export default function HomeScreen() {
     currentIndex,
     total,
     score,
+    isFinished,
     hasAnswered,
     handleAnswer,
     goToNext,
+    restart,
   } = useQuiz();
+
+  if (isFinished) {
+    return (
+      <ResultsScreen
+        score={score}
+        total={total}
+        onRestart={restart}
+      />
+    )
+  }
 
   return (
     <View style={styles.container}>
