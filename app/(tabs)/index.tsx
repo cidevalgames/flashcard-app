@@ -23,6 +23,7 @@ export default function HomeScreen() {
       <Text style={styles.score}>Score : {score}</Text>
 
       <FlashCard
+        key={currentIndex}
         question={currentQuestion}
         onAnswer={handleAnswer}
       />
